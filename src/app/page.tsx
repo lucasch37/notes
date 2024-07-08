@@ -52,60 +52,60 @@ export default function Home() {
                             ease: "easeInOut",
                         }}
                     >
-                        <div className="hidden xl:my-9 dark:flex justify-center dark:xl:scale-100 dark:scale-[0.37] dark:lg:scale-[0.7] -my-28 lg:-my-10 gap-4">
+                        <div className="hidden xl:my-9 dark:flex w-screen justify-center dark:xl:scale-100 dark:scale-[0.7] gap-4">
                             <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Sparkles
-                                    className="w-32 h-32 text-blue-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-blue-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     AI Autocomplete
                                 </p>
                             </GlareCard>
                             <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Earth
-                                    className="w-32 h-32 text-pink-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-pink-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     AI-Generated Icons
                                 </p>
                             </GlareCard>
                             <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Pencil
-                                    className="w-32 h-32 text-yellow-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-yellow-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     Detailed Editor
                                 </p>
                             </GlareCard>
                         </div>
-                        <div className="dark:hidden xl:my-9 flex justify-center xl:scale-100 scale-[0.37] lg:scale-[0.7] -my-28 lg:-my-10 gap-4 text-slate-500">
+                        <div className="dark:hidden xl:my-9 flex w-screen justify-center xl:scale-100 scale-[0.7] gap-4 text-slate-500">
                             <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Sparkles
-                                    className="w-32 h-32 text-blue-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-blue-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     AI Autocomplete
                                 </p>
                             </GlareCardDark>
                             <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Earth
-                                    className="w-32 h-32 text-pink-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-pink-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     AI-Generated Icons
                                 </p>
                             </GlareCardDark>
                             <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Pencil
-                                    className="w-32 h-32 text-yellow-400"
+                                    className="md:w-32 md:h-32 w-16 h-16 text-yellow-400"
                                     strokeWidth={0.5}
                                 />
-                                <p className="font-semibold text-3xl mt-4 flex items-center">
+                                <p className="font-semibold md:text-3xl mt-4 flex items-center">
                                     Detailed Editor
                                 </p>
                             </GlareCardDark>

@@ -30,8 +30,7 @@ import {
     ChevronsRight,
 } from "lucide-react";
 import CreateNoteDialog from "./CreateNoteDialog";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 type Props = {
     data: NoteType[];
@@ -39,6 +38,7 @@ type Props = {
 };
 
 const NoteTable = ({ data, columns }: Props) => {
+    const router = useRouter();
     const [sorting, setSorting] = React.useState<SortingState>([
         {
             id: "updatedAt",
@@ -111,14 +111,13 @@ const NoteTable = ({ data, columns }: Props) => {
                                         row.getIsSelected() && "selected"
                                     }
                                     className="relative hover:bg-muted/50 "
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        router.push(`/note/${row.original.id}`);
+                                    }}
                                 >
                                     {row.getVisibleCells().map((cell) => (
                                         <TableCell key={cell.id}>
-                                            <Link
-                                                href={`/note/${cell.row.original.id}`}
-                                            >
-                                                <div className="absolute top-0 left-0 w-full h-full"></div>
-                                            </Link>
                                             {flexRender(
                                                 cell.column.columnDef.cell,
                                                 cell.getContext()
