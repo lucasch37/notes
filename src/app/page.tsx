@@ -15,11 +15,11 @@ export default function Home() {
         <>
             <div className="z-10 flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Spotlight
-                    className="left-1/3 -top-24 -z-10 invisible dark:visible"
+                    className="left-[48%] top-[10%] -z-10 invisible dark:visible"
                     fill="blue"
                 />
                 <Spotlight
-                    className="left-1/3 -top-24 -z-10 dark:hidden"
+                    className="left-[48%] top-[10%] -z-10 dark:hidden"
                     fill="#3b82f6"
                 />
                 <div>
