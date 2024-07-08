@@ -121,7 +121,7 @@ const Editor = ({ note }: Props) => {
             <Separator />
             {isLoading && (
                 <Button
-                    className="flex items-center mt-4 font-bold"
+                    className="md:flex items-center mt-4 font-bold hidden"
                     disabled
                     variant={"outline"}
                 >
@@ -129,12 +129,31 @@ const Editor = ({ note }: Props) => {
                     <Loader2 className="w-4 h-4 ml-2 animate-spin" />
                 </Button>
             )}
-            <div className="text-sm mt-4 leading-7">
-                Tip: Press{" "}
+            <div className="text-sm md:mt-4 leading-7 invisible md:visible">
+                Press{" "}
                 <kbd className="px-2 py-1.5 text-xs font-semibold bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mx-0.5">
                     Ctrl + Space
                 </kbd>{" "}
                 for AI autocomplete
+            </div>
+            <div className="text-sm leading-7 md:hidde -my-3">
+                <Button
+                    onClick={() => {
+                        setIsLoading(true);
+                        const prompt = editor!
+                            .getText()
+                            .split(" ")
+                            .slice(-30)
+                            .join(" ");
+                        complete(prompt);
+                        lastCompletion.current = "";
+                    }}
+                    variant={"outline"}
+                    className="flex items-center gap-2"
+                >
+                    {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}
+                    Autocomplete with AI
+                </Button>
             </div>
         </>
     );

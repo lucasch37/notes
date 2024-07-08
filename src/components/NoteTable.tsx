@@ -110,7 +110,7 @@ const NoteTable = ({ data, columns }: Props) => {
                                     data-state={
                                         row.getIsSelected() && "selected"
                                     }
-                                    className="relative hover:bg-muted/50 "
+                                    className="relative hover:bg-muted/50 cursor-pointer"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         router.push(`/note/${row.original.id}`);
