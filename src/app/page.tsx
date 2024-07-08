@@ -15,12 +15,12 @@ export default function Home() {
         <>
             <div className="z-10 flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Spotlight
-                    className="-top-40 left-0 md:left-60 md:-top-20 -z-10 invisible dark:visible"
+                    className="left-1/3 -top-24 -z-10 invisible dark:visible"
                     fill="blue"
                 />
                 <Spotlight
-                    className="-top-40 left-0 md:left-60 md:-top-20 -z-10 dark:hidden"
-                    fill="#93c5fd"
+                    className="left-1/3 -top-24 -z-10 dark:hidden"
+                    fill="#3b82f6"
                 />
                 <div>
                     <motion.div
@@ -52,7 +52,7 @@ export default function Home() {
                             ease: "easeInOut",
                         }}
                     >
-                        <div className="hidden xl:my-9 dark:flex w-screen justify-center dark:xl:scale-100 dark:scale-[0.7] gap-4">
+                        <div className="hidden xl:my-9 dark:flex w-screen justify-center dark:xl:scale-100 dark:scale-[0.7] lg:gap-4 gap-2">
                             <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Sparkles
                                     className="md:w-32 md:h-32 w-16 h-16 text-blue-400"
@@ -62,7 +62,7 @@ export default function Home() {
                                     AI Autocomplete
                                 </p>
                             </GlareCard>
-                            <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
+                            <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6 min-w-40">
                                 <Earth
                                     className="md:w-32 md:h-32 w-16 h-16 text-pink-400"
                                     strokeWidth={0.5}
@@ -71,7 +71,7 @@ export default function Home() {
                                     AI-Generated Icons
                                 </p>
                             </GlareCard>
-                            <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6">
+                            <GlareCard className="flex flex-col items-center justify-center text-center py-8 px-6 min-w-36">
                                 <Pencil
                                     className="md:w-32 md:h-32 w-16 h-16 text-yellow-400"
                                     strokeWidth={0.5}
@@ -81,7 +81,7 @@ export default function Home() {
                                 </p>
                             </GlareCard>
                         </div>
-                        <div className="dark:hidden xl:my-9 flex w-screen justify-center xl:scale-100 scale-[0.7] gap-4 text-slate-500">
+                        <div className="dark:hidden xl:my-9 flex w-screen justify-center xl:scale-100 scale-[0.7] lg:gap-4 gap-2 text-slate-500">
                             <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
                                 <Sparkles
                                     className="md:w-32 md:h-32 w-16 h-16 text-blue-400"
@@ -91,7 +91,7 @@ export default function Home() {
                                     AI Autocomplete
                                 </p>
                             </GlareCardDark>
-                            <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
+                            <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6 min-w-40">
                                 <Earth
                                     className="md:w-32 md:h-32 w-16 h-16 text-pink-400"
                                     strokeWidth={0.5}
@@ -100,7 +100,7 @@ export default function Home() {
                                     AI-Generated Icons
                                 </p>
                             </GlareCardDark>
-                            <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6">
+                            <GlareCardDark className="flex flex-col items-center justify-center text-center py-8 px-6 min-w-36">
                                 <Pencil
                                     className="md:w-32 md:h-32 w-16 h-16 text-yellow-400"
                                     strokeWidth={0.5}
