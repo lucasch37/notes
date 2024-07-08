@@ -115,7 +115,7 @@ const Editor = ({ note }: Props) => {
             <div className="prose prose-sm w-full mt-4">
                 <EditorContent
                     editor={editor}
-                    className="min-w-[75vw] 2xl:min-w-[79rem] dark:text-white"
+                    className="min-w-[70vw] md:min-w-[75vw] 2xl:min-w-[79rem] dark:text-white"
                 />
             </div>
             <Separator />
@@ -136,7 +136,7 @@ const Editor = ({ note }: Props) => {
                 </kbd>{" "}
                 for AI autocomplete
             </div>
-            <div className="text-sm leading-7 md:hidde -my-3">
+            <div className="text-sm leading-7 md:hidden -mt-10 -mb-3">
                 <Button
                     onClick={() => {
                         setIsLoading(true);

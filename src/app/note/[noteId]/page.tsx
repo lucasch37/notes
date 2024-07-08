@@ -51,7 +51,7 @@ const NotePage = async ({ params: { noteId } }: Props) => {
                     <span className="text-slate-500">{note.name}</span>
                 </p>
             </div>
-            <div className="mt-4 p-8 backdrop-blur shadow-xl dark:shadow-slate-900 rounded-lg border bg-background w-full">
+            <div className="mt-4 p-8 backdrop-blur shadow-xl dark:shadow-slate-900 rounded-lg border bg-background w-full mb-4">
                 <Editor note={note} />
             </div>
         </div>
