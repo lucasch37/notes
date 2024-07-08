@@ -43,6 +43,17 @@ const Editor = ({ note }: Props) => {
                     lastCompletion.current = "";
                     return true;
                 },
+                "Shift-Space": () => {
+                    setIsLoading(true);
+                    const prompt = this.editor
+                        .getText()
+                        .split(" ")
+                        .slice(-30)
+                        .join(" ");
+                    complete(prompt);
+                    lastCompletion.current = "";
+                    return true;
+                },
             };
         },
     });
@@ -133,6 +144,10 @@ const Editor = ({ note }: Props) => {
                 Press{" "}
                 <kbd className="px-2 py-1.5 text-xs font-semibold bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mx-0.5">
                     Ctrl + Space
+                </kbd>{" "}
+                or{" "}
+                <kbd className="px-2 py-1.5 text-xs font-semibold bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mx-0.5">
+                    Shift + Space
                 </kbd>{" "}
                 for AI autocomplete
             </div>
